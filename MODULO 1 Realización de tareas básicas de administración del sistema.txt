@@ -1,0 +1,43 @@
+Practica 1: Instalacion del Sistema Operativo Oracle Linux
+
+Practica 2: Configuración de parametros de red Oracle Linux
+
+nmtui
+nmcli
+nmcli device status
+nmcli con mod ens160 ipv4.method auto
+nmcli con mod ens160 ipv4.dns 
+nmcli con mod ens160 ens160
+ip a
+ifconfig
+nmcli con mod ens160 ipv4.addresses
+nmcli con mod ens160 ipv4.gateway
+nmcli con mod ens160 ipv4.dns
+nmcli con mod ens160 ipv4.method manual
+ping
+
+Practica 3: Gestion de Usuario y grupos Oracle Linux
+
+useradd
+passwd
+sudo su
+usermod -aG wheel
+id 
+groupadd 
+userdel -r
+groupdel 
+
+Practica 4: Gestion de Permisos de archivos Oracle Linux
+
+pwd
+mkdir
+touch
+ls
+cd
+vi
+cat
+cd ..
+chmod
+ls -l
+cp
+rm -r
