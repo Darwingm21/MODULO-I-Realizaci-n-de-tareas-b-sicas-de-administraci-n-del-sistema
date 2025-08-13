@@ -28,7 +28,6 @@ userdel -r
 groupdel 
 
 Practica 4: Gestion de Permisos de archivos Oracle Linux
-
 pwd
 mkdir
 touch
@@ -41,3 +40,69 @@ chmod
 ls -l
 cp
 rm -r
+
+Práctica 1 – Instalación del Sistema Operativo Oracle Linux
+(No hay comandos específicos, ya que es un procedimiento guiado de instalación)
+
+------------------------------------------------------------
+Práctica 2 – Configuración de parámetros de red en Oracle Linux
+
+Herramientas de configuración de red:
+nmtui                # Abre interfaz gráfica en terminal para configurar red
+nmcli                # Herramienta en línea de comandos para gestionar conexiones de red
+
+Gestión de dispositivos de red:
+nmcli device status  # Muestra el estado de las interfaces de red
+
+Configuración automática (DHCP):
+nmcli con mod ens160 ipv4.method auto   # Configura interfaz para obtener IP automática
+
+Configuración manual:
+nmcli con mod ens160 ipv4.addresses <IP/Máscara>   # Asigna dirección IP estática
+nmcli con mod ens160 ipv4.gateway <IP_gateway>     # Configura puerta de enlace
+nmcli con mod ens160 ipv4.dns <IP_DNS>             # Configura servidor DNS
+nmcli con mod ens160 ipv4.method manual            # Cambia a configuración manual
+nmcli con mod ens160 ens160                        # Renombra/ajusta parámetros de la conexión
+
+Verificación y diagnóstico:
+ip a           # Muestra configuración de red actual
+ifconfig       # Muestra configuración de red (requiere net-tools)
+ping <host>    # Verifica conectividad
+
+------------------------------------------------------------
+Práctica 3 – Gestión de usuarios y grupos en Oracle Linux
+
+Usuarios:
+useradd <usuario>               # Crea un nuevo usuario
+passwd <usuario>                # Cambia/crea contraseña de usuario
+sudo su                         # Cambia a usuario root
+usermod -aG wheel <usuario>     # Agrega usuario al grupo wheel (sudoers)
+id <usuario>                    # Muestra UID, GID y grupos
+userdel -r <usuario>            # Elimina usuario y su carpeta home
+
+Grupos:
+groupadd <grupo>                # Crea un grupo
+groupdel <grupo>                # Elimina un grupo
+
+------------------------------------------------------------
+Práctica 4 – Gestión de permisos y archivos en Oracle Linux
+
+Navegación y ubicación:
+pwd           # Muestra directorio actual
+cd <ruta>     # Cambia de directorio
+cd ..         # Sube un nivel en el directorio
+ls            # Lista contenido del directorio
+ls -l         # Lista con detalles y permisos
+
+Creación y edición:
+mkdir <nombre>    # Crea directorio
+touch <nombre>    # Crea archivo vacío
+vi <archivo>      # Edita archivo con vi
+cat <archivo>     # Muestra contenido del archivo
+
+Permisos:
+chmod <permisos> <archivo>    # Cambia permisos del archivo
+
+Copiado y borrado:
+cp <origen> <destino>         # Copia archivos o directorios
+rm -r <archivo/directorio>    # Elimina archivos o carpetas recursivamente
